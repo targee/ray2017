@@ -3,3 +3,50 @@
 #admission{
     text-align: center;
 }
+
+.button{
+    font-weight: 100;
+    font-size: smaller;
+    padding: 0.5rem 2rem;
+    background: #ef4b28;
+    &:hover{
+        background: #ff8065;
+    }
+    &.style1{
+        color: #ef4b28;
+        border-bottom: solid 2px;
+        border-radius: 0px;
+        padding: 0px;
+        line-height: 1.5rem;
+        background: none;
+    }
+}
+
+p{
+    font-weight: 100;
+    font-size: smaller;
+    line-height: initial;
+    margin-bottom: 0.5rem;
+}
+
+header{
+    margin-bottom: 0px;
+}
+
+h2{
+    font-size: 1.25em;
+    letter-spacing: 0.3rem;
+}
+
+.box{
+    &.style1{
+        padding: 1.5em 3em;
+    }
+}
+
+#banner{
+    background: #ef4b28 url("images/banner.svg") bottom center no-repeat;
+    .button{
+        color: #ef4b28;
+    }
+}
