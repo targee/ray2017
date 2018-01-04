@@ -1,5 +1,9 @@
-<article id="first" class="container box style1 right">
-    <a href="#" class="image fit"><img src="https://s3.amazonaws.com/fjwp/blog/wp-content/uploads/2014/07/5-Remote-Job-Interview-Questions-to-Prepare-for.jpg" alt="" /></a>
+<article id="interview" class="container box style1 right">
+    <p href="#" class="image fit">
+        <video muted="" loop="" autoplay="autoplay">
+            <source src="/assets/media/interview-short.mp4" type="video/mp4">
+        </video>
+    </p>
     <div class="inner">
         <header>
             <h2>面試</h2>
@@ -7,6 +11,50 @@
         <p>
             遠端協作，當然也有遠端面試，來看看面試該怎麼做吧
         </p>
-        <a href="#banner" class="button style1 scrolly-middle">面試過程側寫 >_^</a>
+        <p class="button style1 scrolly-middle" data-toggle="modal" data-target="#interviewModal" 面試過程側寫>面試側錄^^;</a>
     </div>
 </article>
+
+<!-- Modal -->
+<div class="modal fade" id="interviewModal" tabindex="-1" role="dialog" aria-labelledby="ApplyModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-video embed-responsive embed-responsive-16by9">
+                <video controls loop="">
+                    <source src="https://raw.githubusercontent.com/mark19891107/ray2017-video/master/hackson1-long.mp4" type="video/mp4">
+                </video>
+                <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/POVehAqeHOo?controls=0" frameborder="0" gesture="media" allow="encrypted-media"  allowfullscreen></iframe> -->
+            </div>
+            <div class="modal-body">
+                <h1>
+                    面試
+                </h1>
+                <p>
+                    線上面試、線下面試，遠端見習下總會有些限制，實習能提供多少錢也要先講清楚。
+                </p>
+                <hr>
+                <h1>
+                    相關檔案連結：
+                </h1>
+                <a target="_blank" href="https://docs.google.com/document/d/1Jw6qayai3ZXNNs0ShGJ_j8sCQ1ykBxLNTIplfMb5lm0/edit#heading=h.gjdgxs">面試告知事項</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#interviewModal')
+        .on('show.bs.modal', function (e) {
+            $("#interviewModal video")[0].play()
+        })
+        .on('hide.bs.modal', function (e) {
+            $("#interviewModal video")[0].pause()
+        })
+</script>
+
+<style>
+    #interview video{
+        max-width:100%;
+        max-height: initial;
+    }
+</style>
