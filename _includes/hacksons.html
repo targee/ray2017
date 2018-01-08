@@ -1,0 +1,25 @@
+{% for hackson in site.data.hacksons %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+{% if loopindex == 1 %}
+<article id="hackson1" class="container box style1 left">
+{% else %}
+<article id="hackson1" class="container box style1 right">
+{% endif %}
+    <p href="#" class="image fit">
+        <video muted="" loop=""  autoplay="autoplay">
+            <source src="{{hackson.video}}" type="video/mp4">
+        </video>
+    </p>
+    <div class="inner">
+        <header>
+            <h2>{{hackson.date}}<br>{{hackson.title}}</h2>
+        </header>
+        <p>
+            {% for item in hackson.content %}
+                {{item}}<br>
+            {% endfor %}
+        </p>
+        <a href="#banner" class="button style1 scrolly-middle">更多紀錄</a>
+    </div>
+</article>
+{% endfor %}

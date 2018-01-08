@@ -1,0 +1,55 @@
+[
+  {
+    "date": "2017/10/02",
+    "title": "期初見面會",
+    "video":"/assets/media/hackson1-short.mp4",
+    "content": [
+      "地點：行政院第四會議室",
+      "活動：小天使與熱血青年相見歡？"
+    ]
+  },
+  {
+    "date": "2017/10/19",
+    "title": "第一次實作松",
+    "video":"/assets/media/hackson2-short.mp4",
+    "content": [
+      "地點：行政院第四會議室",
+      "活動：心得分享、技術交流",
+      "導覽：行政院院會會議室",
+      "食物：Pizza 🍕"
+    ]
+  },
+  {
+    "date": "2017/11/07",
+    "title": "第二次實作松",
+    "video":"/assets/media/hackson3-short.mp4",
+    "content": [
+      "地點：財政資訊中心",
+      "活動：問題交流與趕進度",
+      "導覽：電子發票演進史",
+      "食物：胖老爹 🍗"
+    ]
+  },
+  {
+    "date": "2017/11/16",
+    "title": "第三次實作松",
+    "video":"/assets/media/hackson4-short.mp4",
+    "content": [
+      "地點：社會企業新創實驗中心",
+      "活動：趕進度、意見交流",
+      "導覽：社會企業新創實驗中心",
+      "食物：超營養三明治 🍞"
+    ]
+  },
+  {
+    "date": "2017/11/30",
+    "title": "PDIS 內部成果發表",
+    "video":"/assets/media/hackson5-short.mp4",
+    "content": [
+      "地點：社會企業新創實驗中心",
+      "活動：各組成果發表",
+      "導覽：社會企業新創實驗中心",
+      "食物：胖老爹 🍗"
+    ]
+  }
+]
