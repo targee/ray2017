@@ -1,5 +1,5 @@
 {% for presentation in site.data.presentations %}
-<article id="hackson1" class="container box style1 {{presentation.type}}">
+<article class="container box style1 {{presentation.type}}">
     <p href="#" class="image fit">
         <video muted="" loop=""  autoplay="autoplay">
             <source src="{{presentation.imgUrl}}" type="video/mp4">
@@ -23,6 +23,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 {% capture content %}{% include markdown/{{presentation.detail}}.md %}{% endcapture %}
                 {{ content | markdownify }}
             </div>
