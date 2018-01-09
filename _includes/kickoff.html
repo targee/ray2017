@@ -1,0 +1,26 @@
+<article id="banner">
+    <header>
+        <h2>籌備會議</h2>
+    </header>
+    <p>
+        在這個階段我們規劃了資訊生、一般生人數，面試方式以及運作模式
+    </p>
+    <p>
+        總之很多很多，反正就是很多很多，要看更多請點下面的按鈕
+    </p>
+    <footer style="text-align:center">
+        <p class="button style2 scrolly" data-toggle="modal" data-target="#PrepareModal">點我看更多^_<</p>
+    </footer>
+</article>
+
+<!-- Modal -->
+<div class="modal fade" id="PrepareModal" tabindex="-1" role="dialog" aria-labelledby="PrepareModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% capture content %}{% include markdown/kickoff.md %}{% endcapture %}
+                {{ content | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{% for presentation in site.data.presentations %}
+<article id="hackson1" class="container box style1 {{presentation.type}}">
+    <p href="#" class="image fit">
+        <video muted="" loop=""  autoplay="autoplay">
+            <source src="{{presentation.imgUrl}}" type="video/mp4">
+        </video>
+        <img src="{{presentation.imgUrl}}" alt="" srcset="">
+    </p>
+    <div class="inner">
+        <header>
+            <h2>{{presentation.date}}<br>{{presentation.title}}</h2>
+        </header>
+        <p>
+            {% for item in presentation.content %}
+                {{item}}<br>
+            {% endfor %}
+        </p>
+        <a class="button style1 scrolly-middle"  data-toggle="modal" data-target="#{{presentation.detail}}">{{presentation.button}}</a>
+    </div>
+</article>
+
+<div class="modal fade" id="{{presentation.detail}}" tabindex="-1" role="dialog" aria-labelledby="ApplyModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% capture content %}{% include markdown/{{presentation.detail}}.md %}{% endcapture %}
+                {{ content | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,33 @@
+{% for prepare in site.data.prepares %}
+<article id="hackson1" class="container box style1 {{prepare.type}}">
+    <p href="#" class="image fit">
+        <video muted="" loop=""  autoplay="autoplay">
+            <source src="{{prepare.imgUrl}}" type="video/mp4">
+        </video>
+        <img src="{{prepare.imgUrl}}" alt="" srcset="">
+    </p>
+    <div class="inner">
+        <header>
+            <h2>{{prepare.date}}<br>{{prepare.title}}</h2>
+        </header>
+        <p>
+            {% for item in prepare.content %}
+                {{item}}<br>
+            {% endfor %}
+        </p>
+        <a class="button style1 scrolly-middle"  data-toggle="modal" data-target="#{{prepare.detail}}">{{prepare.button}}</a>
+    </div>
+</article>
+
+<div class="modal fade" id="{{prepare.detail}}" tabindex="-1" role="dialog" aria-labelledby="ApplyModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% capture content %}{% include markdown/{{prepare.detail}}.md %}{% endcapture %}
+                {{ content | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
