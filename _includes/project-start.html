@@ -1,11 +1,10 @@
 <article id="banner" class="box">
     <header>
-        <h2>專案正式開始！</h2>
+        <h2>{{site.data.settings.project-start.title}}</h2>
     </header>
     <p>
-        兩星期一次見面會，實體培養一下感情
-    </p>
-    <p>
-        當然，無法到場的都可以遠端參與，只是沒有東西吃而已ＸＤ
+        {% for item in site.data.settings.project-start.content %} 
+            {{item}}<br> 
+        {% endfor %}
     </p>
 </article>

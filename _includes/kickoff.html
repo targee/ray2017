@@ -1,15 +1,14 @@
 <article id="banner">
     <header>
-        <h2>籌備會議</h2>
+        <h2>{{site.data.settings.kickoff.title}}</h2>
     </header>
     <p>
-        在這個階段我們規劃了資訊生、一般生人數，面試方式以及運作模式
-    </p>
-    <p>
-        總之很多很多，反正就是很多很多，要看更多請點下面的按鈕
+        {% for item in site.data.settings.kickoff.content %}
+            {{item}}<br>
+        {% endfor %}
     </p>
     <footer style="text-align:center">
-        <p class="button style2 scrolly" data-toggle="modal" data-target="#PrepareModal">點我看更多^_<</p>
+        <p class="button style2 scrolly" data-toggle="modal" data-target="#PrepareModal">{{site.data.settings.kickoff.more}}</p>
     </footer>
 </article>
 
@@ -18,6 +17,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 {% capture content %}{% include markdown/kickoff.md %}{% endcapture %}
                 {{ content | markdownify }}
             </div>
