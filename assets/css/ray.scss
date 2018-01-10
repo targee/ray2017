@@ -1,17 +1,27 @@
----
----
+--- 
+--- 
+body {
+    background-color: #0e0805db;
+    background-blend-mode: luminosity;
+}
 
+.image {
+    img {
+        height: auto !important;
+        width: 100% !important;
+    }
+}
 
-.button{
+.button {
     font-weight: 100;
     font-size: smaller;
     padding: 0.5rem 2rem;
     background: #ef4b28;
-    &:hover{
+    &:hover {
         background: #ff8065;
         text-decoration: none;
     }
-    &.style1{
+    &.style1 {
         color: #ef4b28;
         text-decoration: none;
         border-bottom: solid 2px;
@@ -22,64 +32,74 @@
     }
 }
 
-p{
+p {
     font-weight: 100;
     font-size: smaller;
     line-height: initial;
     margin-bottom: 0.5rem;
 }
 
-header{
+a {
+    border-bottom: 0px;
+}
+
+header {
     margin-bottom: 0px;
 }
 
-h2{
+h2 {
     font-size: 1.25em;
     letter-spacing: 0.3rem;
 }
 
-.box{
-    &.style1{
+.box {
+    &.style1 {
         padding: 1.5em 3em;
     }
 }
 
-#banner{
+#banner {
     background: #ef4b28 url("images/banner.svg") bottom center no-repeat;
-    .button{
+    .button {
         color: #ef4b28;
     }
 }
 
-video{
+video {
     max-height: 110%;
 }
 
-@media screen and (max-width: 736px){
+@media screen and (max-width: 736px) {
     article.box.style1 {
         padding: 0;
         text-align: center;
     }
-    .button{
+    .button {
         width: auto;
     }
-    video{
+    video {
         max-width: 100%;
     }
 }
 
-.modal{
-    .modal-body{
-        padding:1.5rem;
+.modal {
+    .modal-body {
+        padding: 1.5rem;
     }
-    h1{
+    h1 {
         padding-bottom: 0.5rem;
     }
-    p{
+    p {
         // padding:1rem;
     }
-    a{
+    a {
         font-size: 1rem;
         color: #ef4b28;
+    }
+    button {
+        width: auto;
+        &:hover {
+            background: none;
+        }
     }
 }
