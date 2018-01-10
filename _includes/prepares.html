@@ -1,10 +1,13 @@
 {% for prepare in site.data.prepares %}
 <article class="container box style1 {{prepare.type}}">
     <p href="#" class="image fit">
-        <video muted="" loop=""  autoplay="autoplay">
-            <source src="{{prepare.imgUrl}}" type="video/mp4">
-        </video>
-        <img src="{{prepare.imgUrl}}" alt="" srcset="">
+        {% if prepare.video ==  %}
+            <img src="{{prepare.img}}" alt="" srcset="">
+        {% else %}
+            <video muted="" loop=""  autoplay="autoplay">
+                <source src="{{prepare.video}}" type="video/mp4">
+            </video>
+        {% endif %}
     </p>
     <div class="inner">
         <header>

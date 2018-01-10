@@ -1,10 +1,13 @@
 {% for presentation in site.data.presentations %}
 <article class="container box style1 {{presentation.type}}">
     <p href="#" class="image fit">
-        <video muted="" loop=""  autoplay="autoplay">
-            <source src="{{presentation.imgUrl}}" type="video/mp4">
-        </video>
-        <img src="{{presentation.imgUrl}}" alt="" srcset="">
+        {% if prepare.video ==  %}
+            <img src="{{presentation.img}}" alt="" srcset="">
+        {% else %}
+            <video muted="" loop=""  autoplay="autoplay">
+                <source src="{{presentation.video}}" type="video/mp4">
+            </video>
+        {% endif %}
     </p>
     <div class="inner">
         <header>
