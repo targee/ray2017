@@ -22,8 +22,13 @@
 		<link rel="stylesheet" href="/assets/css/ray.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
 	</head>
 	<body>
+
+		<script>
+			var playerInfoList = new Array();
+		</script>
 
         {% include banner.html %}
 
@@ -43,21 +48,9 @@
 
 		{% include presentations.html %}
 
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-				<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			<div class="copyright">
-				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
+		{% include experience.html %}
+
+		{% include ray2018.html %}
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -66,6 +59,38 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+
+		<script>
+
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			var players = new Array();
+
+			function onYouTubeIframeAPIReady() {
+				if (typeof playerInfoList === 'undefined') return;
+
+				for (var i = 0; i < playerInfoList.length; i++) {
+					var curplayer = createPlayer(playerInfoList[i]);
+					players[i] = curplayer;
+
+				}
+			}
+
+
+			function createPlayer(playerInfo) {
+				return new YT.Player(playerInfo.id, {
+					height: playerInfo.height,
+					width: playerInfo.width,
+					playerVars: {
+						playlist: playerInfo.playerVars.playlist,
+						loop: playerInfo.playerVars.loop
+					}
+				});
+			}
+		</script>
 
 	</body>
 </html>

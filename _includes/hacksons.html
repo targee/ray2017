@@ -1,6 +1,4 @@
-<script>
-    var playerInfoList = new Array();
-</script> {% for hackson in site.data.hacksons %}
+{% for hackson in site.data.hacksons %}
 <article class="container box style1 {{hackson.type}}">
     <p href="#" class="image fit">
         <video muted="" loop="" autoplay="autoplay">
@@ -25,9 +23,6 @@
         <div class="modal-content">
             <div class="modal-video embed-responsive embed-responsive-16by9">
                 <div id="{{hackson.youtube}}"></div>
-                <!-- <iframe  type="text/html" width="640" height="360"
-                src="https://www.youtube.com/embed/{{hackson.youtube}}"
-                frameborder="0"></iframe> -->
                 <script>
                     var player = {
                         id: '{{hackson.youtube}}',
@@ -40,15 +35,6 @@
                     }
 
                     playerInfoList.push(player);
-
-                    // function onYouTubeIframeAPIReady() {
-                    //     var player = new YT.Player('UID{{hackson.youtube}}', {
-                    //         playerVars: {
-                    //             playlist: '{{hackson.youtube}}',
-                    //             loop: 1
-                    //         }
-                    //     });
-                    // }
 
                     $('#{{hackson.detail}}')
                         .on('show.bs.modal', function (e) {
@@ -70,39 +56,4 @@
         </div>
     </div>
 </div>
-
-
-
-
-
 {% endfor %}
-<script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var players = new Array();
-
-    function onYouTubeIframeAPIReady() {
-        if (typeof playerInfoList === 'undefined') return;
-
-        for (var i = 0; i < playerInfoList.length; i++) {
-            var curplayer = createPlayer(playerInfoList[i]);
-            players[i] = curplayer;
-
-        }
-    }
-
-
-    function createPlayer(playerInfo) {
-        return new YT.Player(playerInfo.id, {
-            height: playerInfo.height,
-            width: playerInfo.width,
-            playerVars: {
-                playlist: playerInfo.playerVars.playlist,
-                loop: playerInfo.playerVars.loop
-            }
-        });
-    }
-</script>
