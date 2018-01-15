@@ -1,0 +1,61 @@
+<section id="experience" class="text-center container box style1">
+    <header>
+        <h2>{{site.data.settings.experience.title}}</h2>
+    </header>
+    <p>
+        {% for item in site.data.settings.experience.content %}
+            {{item}}<br>
+        {% endfor %}
+    </p>
+    <footer>
+        <a class="button scrolly" data-toggle="modal" data-target="#ExperienceModal">{{site.data.settings.experience.more}}</a>
+    </footer>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ExperienceModal" tabindex="-1" role="dialog" aria-labelledby="ExperienceModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-video embed-responsive embed-responsive-16by9">
+                        <div id="{{site.data.settings.experience.youtube}}"></div>
+                        <script>
+                            var player = {
+                                id: '{{site.data.settings.experience.youtube}}',
+                                height: '390',
+                                width: '640',
+                                playerVars: {
+                                    playlist: '{{site.data.settings.experience.youtube}}',
+                                    loop: 1
+                                }
+                            }
+        
+                            playerInfoList.push(player);
+        
+                            $('#ExperienceModal')
+                                .on('show.bs.modal', function (e) {
+                                    YT.get('{{site.data.settings.experience.youtube}}').playVideo();
+                                    YT.get('{{site.data.settings.experience.youtube}}').setPlaybackQuality('small');
+                                })
+                                .on('hide.bs.modal', function (e) {
+                                    YT.get('{{site.data.settings.experience.youtube}}').pauseVideo();
+                                })
+                        </script>
+        
+                    </div>
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {% capture content %}{% include markdown/experience.md %}{% endcapture %}
+                {{ content | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #experience {
+        background-image: url(https://images.unsplash.com/photo-1503551723145-6c040742065b?auto=format&fit=crop&w=2100&q=80);
+        background-color: #ffffffcc;
+        background-blend-mode: overlay;
+    }
+</style>
