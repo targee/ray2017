@@ -1,12 +1,14 @@
 <section id="admission" class="container box style1">
     <header>
-        <h2>公布錄取名單</h2>
+        <h2>{{ site.data.settings.admission.title }}</h2>
     </header>
     <p>
-        經過一連串面試後，一共 5 位資訊專長夥伴、10 位熱血青年，將與 PDIS 一起體檢政府單位 508 個對外網站！
+        {% for item in site.data.settings.admission.content %}
+            {{item}}<br>
+        {% endfor %}
     </p>
     <footer>
-        <a href="https://ray.pdis.nat.gov.tw/#admission-list" target="_blank" class="button scrolly">錄取名單（去識別化）</a>
+        <a href="https://ray.pdis.nat.gov.tw/#admission-list" target="_blank" class="button scrolly">{{ site.data.settings.admission.more }}</a>
     </footer>
 </section>
 
