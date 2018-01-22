@@ -1,15 +1,15 @@
 [
   {
     "date": "2017/07",
-    "title": "公告活動",
+    "title": "計畫正式公告",
     "button": "更多宣傳內容規劃",
     "detail": "announcement",
     "type":"right",
     "img":"https://images.unsplash.com/photo-1494707924465-e1426acb48cb?auto=format&fit=crop&w=2100&q=80",
     "content": [
-      "建立簡潔的計畫說明網頁",
-      "透過青年署「公部門見習計畫」網站、數位政委 Facebook 分享",
-      "兩週內便湧入將近100位學生報名"
+      "建立計畫說明網頁",
+      "透過教育部青年署「公部門見習計畫」網站、數位政委 Facebook 分享",
+      "兩周內便湧入近100名學生報名"
     ]
   },
   {
@@ -20,13 +20,12 @@
     "type":"left",
     "img":"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2104&q=80",
     "content": [
-      "計畫名額只有 15 位",
-      "在確認專業技能都沒有問題的情況下",
-      "PDIS 團隊試圖平衡全台各地的參與人數"
+      "在確認專業條件合格的前提下",
+      "PDIS 團隊盡可能平衡台灣各地的參與人數"
     ]
   },
   {
-    "date": "2017/10/19",
+    "date": "2017/8/23",
     "title": "面試",
     "button": "詳細面試過程",
     "detail": "interview",
