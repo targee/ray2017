@@ -7,7 +7,7 @@
     "type":"right",
     "img":"https://images.unsplash.com/photo-1494707924465-e1426acb48cb?auto=format&fit=crop&w=2100&q=80",
     "content": [
-      "建立計畫說明網頁",
+      "建置計畫說明網頁",
       "透過教育部青年署「公部門見習計畫」網站、數位政委 Facebook 分享",
       "兩周內便湧入近100名學生報名"
     ]
@@ -21,7 +21,7 @@
     "img":"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2104&q=80",
     "content": [
       "在確認專業條件合格的前提下",
-      "PDIS 團隊盡可能平衡台灣各地的參與人數"
+      "PDIS 盡可能平衡台灣各地的參與人數"
     ]
   },
   {
@@ -32,10 +32,8 @@
     "type":"right",
     "video":"/assets/media/interview-short.mp4",
     "content": [
-      "遠端協作，當然也可以遠端面試",
-      "透過視訊軟體，遠端面試中南部的夥伴",
-      "也在面試中告知注意事項",
-      "避免往後實際見習過程不如預期"
+      "不便前來的同學，可與 PDIS 視訊面試",
+      "面試時 PDIS 均充分告知見習注意事項"
     ]
   }
 ]
